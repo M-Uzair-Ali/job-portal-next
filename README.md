@@ -1,6 +1,6 @@
 # JobPortalAPI
 
-A fully structured RESTful API built with **ASP.NET Core 8** following **Clean Architecture** principles. Designed as the backend foundation for (HunarAI) ,an AI-powered career matching platform targeting the Pakistani job market.
+A fully structured RESTful API built with **ASP.NET Core 8** following **Clean Architecture** principles. Designed as the backend foundation for HunarAI an AI-powered career matching platform targeting the Pakistani job market.
 
 ---
 
