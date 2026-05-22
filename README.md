@@ -1,6 +1,6 @@
 # JobPortalAPI
 
-A fully structured RESTful API built with **ASP.NET Core 8** following **Clean Architecture** principles. Designed as the backend foundation for [HunarAI](https://github.com/yourusername/HunarAI) — an AI-powered career matching platform targeting the Pakistani job market.
+A fully structured RESTful API built with **ASP.NET Core 8** following **Clean Architecture** principles. Designed as the backend foundation for an AI-powered career matching platform targeting the Pakistani job market.
 
 ---
 
@@ -9,7 +9,7 @@ A fully structured RESTful API built with **ASP.NET Core 8** following **Clean A
 | Technology | Purpose |
 |---|---|
 | ASP.NET Core 8 | Web API framework |
-| Entity Framework Core 8 | ORM — SQL Server migrations |
+| Entity Framework Core 8 | ORM  SQL Server migrations |
 | SQL Server | Primary relational database |
 | JWT Bearer Auth | Stateless authentication |
 | BCrypt.Net-Next | Secure password hashing |
@@ -67,7 +67,7 @@ JobPortalAPI/
 
 ### Application System
 - Candidates apply to jobs with CV file path
-- Duplicate application prevention — one candidate, one application per job
+- Duplicate application prevention one candidate, one application per job
 - Expired job listing protection
 - Recruiters update application status (Pending → Accepted / Rejected)
 - Candidates view all their own applications
@@ -110,7 +110,7 @@ JobPortalAPI/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/JobPortalAPI.git
+git clone https://github.com/M-Uzair-Ali/JobPortalAPI.git
 cd JobPortalAPI
 ```
 
@@ -150,7 +150,7 @@ https://localhost:7259/swagger
 
 ## Testing the API
 
-### Step 1 — Register a Recruiter
+### Step 1 Register a Recruiter
 ```json
 POST /api/auth/register
 {
@@ -161,7 +161,7 @@ POST /api/auth/register
 }
 ```
 
-### Step 2 — Login and copy the token
+### Step 2 Login and copy the token
 ```json
 POST /api/auth/login
 {
@@ -170,13 +170,13 @@ POST /api/auth/login
 }
 ```
 
-### Step 3 — Authorize in Swagger
+### Step 3 Authorize in Swagger
 Click the **Authorize** button in Swagger UI and enter:
 ```
 Bearer eyJhbGciOiJIUzI1NiIs...
 ```
 
-### Step 4 — Create a job listing
+### Step 4 Create a job listing
 ```json
 POST /api/jobs
 {
@@ -189,7 +189,7 @@ POST /api/jobs
 }
 ```
 
-### Step 5 — Register a Candidate and apply
+### Step 5 Register a Candidate and apply
 ```json
 POST /api/applications
 {
@@ -200,7 +200,7 @@ POST /api/applications
 
 ---
 
-## Project Structure — Key Files
+## Project Structure Key Files
 
 ```
 JobPortalAPI.Domain/
@@ -231,16 +231,16 @@ JobPortalAPI.Infrastructure/
 - A candidate **cannot apply twice** to the same job
 - A recruiter **can only edit or delete their own** job listings
 - An **expired job** cannot receive new applications
-- **Refresh token rotation** — each refresh invalidates the previous token
-- **Role validation** on registration — only Admin, Recruiter, Candidate accepted
+- **Refresh token rotation** each refresh invalidates the previous token
+- **Role validation** on registration only Admin, Recruiter, Candidate accepted
 
 ---
 
-## Part of HunarAI
+## Part of AI-Project
 
-This API is the backend foundation of **HunarAI** — an AI-powered career matching platform built for the Pakistani job market.
+This API is the backend foundation of **AI-Porject** an AI-powered career matching platform built for the Pakistani job market.
 
-**Planned AI extensions (coming in HunarAI):**
+**Planned AI extensions (coming in AI-Project):**
 - Resume parsing with GPT-4o
 - Semantic job matching with SBERT + Qdrant vector database
 - Skill gap analysis with personalized learning roadmap
@@ -268,7 +268,7 @@ This API is the backend foundation of **HunarAI** — an AI-powered career match
 
 ## Author
 
-**Uzair** — BSCS Final Year Student
+**Muhammad Uzair Ali ** BSCS Third Year Student
 - GitHub: [@yourusername](https://github.com/yourusername)
 - Project: HunarAI — AI-Powered Career Matching for Pakistan
 
