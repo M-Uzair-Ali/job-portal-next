@@ -268,7 +268,7 @@ This API is the backend foundation of **HunarAI** an AI-powered career matching 
 
 ## Author
 
-**Muhammad Uzair Ali ** BSCS Third Year Student
+Muhammad Uzair Ali  BSCS Third Year Student
 - GitHub: [@M-Uzair-Ali](https://github.com/M-Uzair-Ali)
 - Project: HunarAI AI-Powered Career Matching for Pakistan
 
