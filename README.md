@@ -54,15 +54,15 @@ JobPortalAPI/
 ### Authentication & Security
 - User registration with role selection (Admin, Recruiter, Candidate)
 - JWT access token generation with configurable expiry
-- Refresh token rotation — old token revoked, new token issued on every refresh
-- BCrypt password hashing — plain text passwords never stored
+- Refresh token rotation old token revoked, new token issued on every refresh
+- BCrypt password hashing plain text passwords never stored
 - Role-based endpoint authorization
 
 ### Job Management
 - Recruiters can create, update, and delete their own job listings
 - Public job browsing with filters (location, job type, salary range)
 - Paginated results
-- Ownership enforcement — recruiters can only modify their own jobs
+- Ownership enforcement recruiters can only modify their own jobs
 - Admins can delete any listing
 
 ### Application System
@@ -269,8 +269,8 @@ This API is the backend foundation of **AI-Porject** an AI-powered career matchi
 ## Author
 
 **Muhammad Uzair Ali ** BSCS Third Year Student
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Project: HunarAI — AI-Powered Career Matching for Pakistan
+- GitHub: [@M-Uzair-Ali](https://github.com/M-Uzair-Ali)
+- Project: HunarAI AI-Powered Career Matching for Pakistan
 
 ---
 
