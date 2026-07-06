@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{256C4250-D302-9543-9AF8-24ECD856C635}|JobPortalAPI.Infrastructure\\JobPortalAPI.Infrastructure.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi.infrastructure\\repositories\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{256C4250-D302-9543-9AF8-24ECD856C635}|JobPortalAPI.Infrastructure\\JobPortalAPI.Infrastructure.csproj|solutionrelative:jobportalapi.infrastructure\\repositories\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5AC66A8-1DF6-3BB9-6303-526E82EE1179}|JobPortalAPI\\JobPortalAPI.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5AC66A8-1DF6-3BB9-6303-526E82EE1179}|JobPortalAPI\\JobPortalAPI.csproj|solutionrelative:jobportalapi\\controllers\\matchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A5AC66A8-1DF6-3BB9-6303-526E82EE1179}|JobPortalAPI\\JobPortalAPI.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5AC66A8-1DF6-3BB9-6303-526E82EE1179}|JobPortalAPI\\JobPortalAPI.csproj|solutionrelative:jobportalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi.application\\dtos\\application\\applicationresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|solutionrelative:jobportalapi.application\\dtos\\application\\applicationresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{256C4250-D302-9543-9AF8-24ECD856C635}|JobPortalAPI.Infrastructure\\JobPortalAPI.Infrastructure.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi.infrastructure\\services\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{256C4250-D302-9543-9AF8-24ECD856C635}|JobPortalAPI.Infrastructure\\JobPortalAPI.Infrastructure.csproj|solutionrelative:jobportalapi.infrastructure\\services\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi.application\\validators\\createjobvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|solutionrelative:jobportalapi.application\\validators\\createjobvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi.application\\dtos\\application\\applyjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|solutionrelative:jobportalapi.application\\dtos\\application\\applyjobdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A5AC66A8-1DF6-3BB9-6303-526E82EE1179}|JobPortalAPI\\JobPortalAPI.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5AC66A8-1DF6-3BB9-6303-526E82EE1179}|JobPortalAPI\\JobPortalAPI.csproj|solutionrelative:jobportalapi\\middleware\\globalexceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi.application\\validators\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|solutionrelative:jobportalapi.application\\validators\\registerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|c:\\users\\uzair\\source\\repos\\jobportalapi\\jobportalapi.application\\validators\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3007A48C-9685-C781-A48F-A10EF20D9FEF}|JobPortalAPI.Application\\JobPortalAPI.Application.csproj|solutionrelative:jobportalapi.application\\validators\\loginrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,108 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\DTOs\\Application\\ApplicationResponseDto.cs",
-              "RelativeDocumentMoniker": "JobPortalAPI.Application\\DTOs\\Application\\ApplicationResponseDto.cs",
-              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\DTOs\\Application\\ApplicationResponseDto.cs",
-              "RelativeToolTip": "JobPortalAPI.Application\\DTOs\\Application\\ApplicationResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "JobService.cs",
+              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Infrastructure\\Repositories\\JobService.cs",
+              "RelativeDocumentMoniker": "JobPortalAPI.Infrastructure\\Repositories\\JobService.cs",
+              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Infrastructure\\Repositories\\JobService.cs",
+              "RelativeToolTip": "JobPortalAPI.Infrastructure\\Repositories\\JobService.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAQwHcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T05:40:03.087Z",
+              "WhenOpened": "2026-07-06T07:58:15.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MatchController.cs",
+              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI\\Controllers\\MatchController.cs",
+              "RelativeDocumentMoniker": "JobPortalAPI\\Controllers\\MatchController.cs",
+              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI\\Controllers\\MatchController.cs",
+              "RelativeToolTip": "JobPortalAPI\\Controllers\\MatchController.cs",
+              "ViewState": "AgIAADMAAACAZmZmZmYiwDEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T06:51:20.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ApplicationService.cs",
-              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Infrastructure\\Services\\ApplicationService.cs",
-              "RelativeDocumentMoniker": "JobPortalAPI.Infrastructure\\Services\\ApplicationService.cs",
-              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Infrastructure\\Services\\ApplicationService.cs",
-              "RelativeToolTip": "JobPortalAPI.Infrastructure\\Services\\ApplicationService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwFQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T05:40:42.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplyJobDto.cs",
-              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\DTOs\\Application\\ApplyJobDto.cs",
-              "RelativeDocumentMoniker": "JobPortalAPI.Application\\DTOs\\Application\\ApplyJobDto.cs",
-              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\DTOs\\Application\\ApplyJobDto.cs",
-              "RelativeToolTip": "JobPortalAPI.Application\\DTOs\\Application\\ApplyJobDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T05:38:39.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateJobValidator.cs",
-              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\Validators\\CreateJobValidator.cs",
-              "RelativeDocumentMoniker": "JobPortalAPI.Application\\Validators\\CreateJobValidator.cs",
-              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\Validators\\CreateJobValidator.cs",
-              "RelativeToolTip": "JobPortalAPI.Application\\Validators\\CreateJobValidator.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T08:46:43.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI\\Program.cs",
               "RelativeDocumentMoniker": "JobPortalAPI\\Program.cs",
               "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI\\Program.cs",
               "RelativeToolTip": "JobPortalAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T10:09:03.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\Validators\\LoginRequestValidator.cs",
-              "RelativeDocumentMoniker": "JobPortalAPI.Application\\Validators\\LoginRequestValidator.cs",
-              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\Validators\\LoginRequestValidator.cs",
-              "RelativeToolTip": "JobPortalAPI.Application\\Validators\\LoginRequestValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T08:45:41.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegisterRequestValidator.cs",
-              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\Validators\\RegisterRequestValidator.cs",
-              "RelativeDocumentMoniker": "JobPortalAPI.Application\\Validators\\RegisterRequestValidator.cs",
-              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Application\\Validators\\RegisterRequestValidator.cs",
-              "RelativeToolTip": "JobPortalAPI.Application\\Validators\\RegisterRequestValidator.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T08:41:55.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GlobalExceptionMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI\\Middleware\\GlobalExceptionMiddleware.cs",
-              "RelativeDocumentMoniker": "JobPortalAPI\\Middleware\\GlobalExceptionMiddleware.cs",
-              "ToolTip": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI\\Middleware\\GlobalExceptionMiddleware.cs",
-              "RelativeToolTip": "JobPortalAPI\\Middleware\\GlobalExceptionMiddleware.cs",
-              "ViewState": "AgIAABYAAAAAzczMzMwUwAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T08:16:34.525Z",
               "EditorCaption": ""
             }
           ]
