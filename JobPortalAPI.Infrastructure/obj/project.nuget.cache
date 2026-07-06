@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "uNd4vnOs+88=",
+  "dgSpecHash": "WpBcfFSFbLE=",
   "success": true,
   "projectFilePath": "C:\\Users\\uzair\\source\\repos\\JobPortalAPI\\JobPortalAPI.Infrastructure\\JobPortalAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uzair\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\uzair\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\uzair\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\uzair\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\uzair\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.7\\microsoft.aspnetcore.authentication.jwtbearer.8.0.7.nupkg.sha512",
     "C:\\Users\\uzair\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\uzair\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

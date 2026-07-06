@@ -47,6 +47,7 @@ public class ApplicationService : IApplicationService
             Id = created.Id,
             JobTitle = job.Title,
             CandidateName = created.Candidate?.FullName ?? string.Empty,
+            CVFilePath = created.CVFilePath,
             Status = created.Status.ToString(),
             AppliedAt = created.AppliedAt
         };
@@ -61,6 +62,7 @@ public class ApplicationService : IApplicationService
             Id = a.Id,
             JobTitle = a.Job?.Title ?? string.Empty,
             CandidateName = a.Candidate?.FullName ?? string.Empty,
+            CVFilePath = a.CVFilePath,
             Status = a.Status.ToString(),
             AppliedAt = a.AppliedAt
         }).ToList();

@@ -95,6 +95,38 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "JobPortalAPI.Controllers.FilesController",
+    "Method": "DeleteCV",
+    "RelativePath": "api/files/delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filePath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobPortalAPI.Controllers.FilesController",
+    "Method": "UploadCV",
+    "RelativePath": "api/files/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "JobPortalAPI.API.Controllers.JobsController",
     "Method": "CreateJob",
     "RelativePath": "api/Jobs",

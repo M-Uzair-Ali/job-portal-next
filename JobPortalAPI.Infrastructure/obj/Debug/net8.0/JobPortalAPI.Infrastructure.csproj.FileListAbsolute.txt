@@ -10,6 +10,7 @@ C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\n
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\net8.0\JobPortalAPI.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\net8.0\JobPortalAPI.Infrastructure.AssemblyInfo.cs
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\net8.0\JobPortalAPI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\net8.0\JobPortalAPI.Infrastructure.sourcelink.json
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\net8.0\JobPorta.4D73D913.Up2Date
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\net8.0\JobPortalAPI.Infrastructure.dll
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Infrastructure\obj\Debug\net8.0\refint\JobPortalAPI.Infrastructure.dll

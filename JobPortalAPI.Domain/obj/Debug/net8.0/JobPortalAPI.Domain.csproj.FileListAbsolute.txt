@@ -5,6 +5,7 @@ C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\Jo
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\JobPortalAPI.Domain.AssemblyInfoInputs.cache
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\JobPortalAPI.Domain.AssemblyInfo.cs
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\JobPortalAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\JobPortalAPI.Domain.sourcelink.json
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\JobPortalAPI.Domain.dll
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\refint\JobPortalAPI.Domain.dll
 C:\Users\uzair\source\repos\JobPortalAPI\JobPortalAPI.Domain\obj\Debug\net8.0\JobPortalAPI.Domain.pdb
