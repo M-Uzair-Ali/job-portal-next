@@ -5,6 +5,7 @@
         Task<string> MatchResumeAsync(string resumeText, int topK = 5);
         Task<string> MatchCVAsync(string cvFilePath, int topK = 5);
         Task IndexJobAsync(int jobId, string title, string description);
+        Task<string> AnalyzeSkillGapAsync(string cvFilePath, string jobDescription, string jobTitle);
         Task DeleteJobAsync(int jobId);
     }
 }

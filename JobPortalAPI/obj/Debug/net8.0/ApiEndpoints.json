@@ -267,5 +267,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobPortalAPI.Controllers.SkillGapController",
+    "Method": "AnalyzeSkillGap",
+    "RelativePath": "api/skillgap",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "JobPortalAPI.Controllers.SkillGapRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

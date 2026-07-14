@@ -95,7 +95,7 @@ public class JobService : IJobService
 
         var updated = await _jobRepository.UpdateAsync(job);
 
-        // re-index updated job in Qdrant
+
         try
         {
             await _matchingService.IndexJobAsync(

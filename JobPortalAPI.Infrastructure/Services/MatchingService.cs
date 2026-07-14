@@ -29,6 +29,17 @@ namespace JobPortalAPI.Infrastructure.Services
             return await response.Content.ReadAsStringAsync();
         }
 
+        public async Task<string> AnalyzeSkillGapAsync(string cvFilePath, string jobDescription, string jobTitle)
+        {
+            var payload = new { cv_file_path = cvFilePath, job_description = jobDescription, job_title = jobTitle };
+            var json = JsonSerializer.Serialize(payload);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync($"{_baseUrl}/skill-gap", content);
+            response.EnsureSuccessStatusCode();
+
+            return await response.Content.ReadAsStringAsync();
+        }
         public async Task IndexJobAsync(int jobId, string title, string description)
         {
             var payload = new { job_id = jobId, title, description };
