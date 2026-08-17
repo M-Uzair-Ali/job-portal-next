@@ -11,6 +11,7 @@ public class Job
     public DateTime CreatedAt { get; set; }
     public DateTime ExpiryDate { get; set; }
 
+    public string? KeyPoints { get; set; }
     public Guid RecruiterId { get; set; }
     public User Recruiter { get; set; } = null!;
 

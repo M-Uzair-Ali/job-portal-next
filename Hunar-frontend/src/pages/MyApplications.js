@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import Navbar from "../components/Navbar";
 
 const API_BASE = "https://localhost:7259/api";
 
@@ -32,7 +31,7 @@ function ApplicationCard({ application, index }) {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.35, ease: "easeOut" }}
-      className="bg-white border border-sand rounded-xl p-4"
+      className="bg-white border border-sand rounded-md p-4"
     >
       <div className="flex items-start justify-between mb-2">
         <p className="text-sm font-medium text-ink">{application.jobTitle}</p>
@@ -89,7 +88,6 @@ export default function MyApplications() {
 
   return (
     <div className="min-h-screen bg-cream px-6 py-8 md:px-12">
-      <Navbar />
 
       <div className="max-w-3xl mx-auto">
         <p className="text-sm font-medium text-ink mb-6">My Applications</p>
@@ -108,7 +106,7 @@ export default function MyApplications() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-sm text-stone bg-white border border-sand rounded-xl p-6 text-center"
+            className="text-sm text-stone bg-white border border-sand rounded-md p-6 text-center"
           >
             You haven't applied to any jobs yet. Head to the Jobs page to get started.
           </motion.div>

@@ -446,6 +446,18 @@
         }
       }
     },
+    "/api/Jobs/backfill-key-points": {
+      "post": {
+        "tags": [
+          "Jobs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/match/resume": {
       "post": {
         "tags": [

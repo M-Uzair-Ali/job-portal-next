@@ -8,6 +8,8 @@ public interface IJobRepository
     Task<Job> CreateAsync(Job job);
     Task<Job?> GetByIdAsync(Guid id);
     Task<List<Job>> GetByRecruiterIdAsync(Guid recruiterId);
+    Task<List<Job>> GetJobsMissingKeyPointsAsync();
+    Task UpdateKeyPointsAsync(Guid jobId, string keyPointsJson);
     Task<(List<Job> Jobs, int TotalCount)> GetAllAsync(
         int page,
         int pageSize,

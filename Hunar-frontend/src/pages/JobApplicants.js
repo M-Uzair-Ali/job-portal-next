@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 // ─────────────────────────────────────────────────────────────
 // MOCK DATA — replace with a real API call once the backend
@@ -71,7 +70,7 @@ function ApplicantCard({ applicant, index, onAccept, onReject, actionState }) {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.35, ease: "easeOut" }}
-      className="bg-white border border-sand rounded-xl p-4"
+      className="bg-white border border-sand rounded-md p-4"
     >
       <div className="flex items-start justify-between mb-2">
         <div>
@@ -103,7 +102,7 @@ function ApplicantCard({ applicant, index, onAccept, onReject, actionState }) {
           <button
             onClick={() => onAccept(applicant)}
             disabled={isBusy}
-            className="flex-1 bg-gold hover:bg-gold/90 disabled:opacity-60 text-ink text-xs font-medium py-2 rounded-lg transition-colors duration-150"
+            className="flex-1 bg-gold hover:bg-purple2 disabled:opacity-60 text-white text-xs font-medium py-2 rounded-lg transition-colors duration-150"
           >
             {actionState === "accepting" ? "Accepting..." : "Accept"}
           </button>
@@ -178,7 +177,6 @@ export default function JobApplicants() {
 
   return (
     <div className="min-h-screen bg-cream px-6 py-8 md:px-12">
-      <Navbar />
 
       <div className="max-w-3xl mx-auto">
         <button
@@ -199,7 +197,7 @@ export default function JobApplicants() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-sm text-stone bg-white border border-sand rounded-xl p-6 text-center"
+            className="text-sm text-stone bg-white border border-sand rounded-md p-6 text-center"
           >
             No applicants yet for this job.
           </motion.div>

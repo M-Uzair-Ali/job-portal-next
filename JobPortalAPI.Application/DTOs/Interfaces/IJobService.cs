@@ -11,4 +11,5 @@ public interface IJobService
     Task<JobResponseDto> UpdateJobAsync(Guid id, CreateJobDto dto, Guid recruiterId);
     Task DeleteJobAsync(Guid id, Guid recruiterId);
     Task<List<JobResponseDto>> GetMyJobsAsync(Guid recruiterId);
+    Task<int> BackfillKeyPointsAsync();
 }

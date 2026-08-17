@@ -11,4 +11,5 @@ public class JobResponseDto
     public DateTime CreatedAt { get; set; }
     public DateTime ExpiryDate { get; set; }
     public string RecruiterName { get; set; } = null!;
+    public List<string> KeyPoints { get; set; } = new();
 }

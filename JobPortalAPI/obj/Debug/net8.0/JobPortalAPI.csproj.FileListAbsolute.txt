@@ -359,10 +359,10 @@ C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\stati
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\JobPorta.BF3E51AA.Up2Date
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\JobPortalAPI.dll
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\refint\JobPortalAPI.dll
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\JobPortalAPI.pdb
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\JobPortalAPI.genruntimeconfig.cache
 C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\ref\JobPortalAPI.dll
+C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -2,6 +2,7 @@
 using JobPortalAPI.Application.DTOs.Job;
 using JobPortalAPI.Application.Interfaces;
 using JobPortalAPI.Domain.Entities;
+using System.Text.Json;
 
 namespace JobPortalAPI.Infrastructure.Services;
 
@@ -30,6 +31,16 @@ public class JobService : IJobService
             RecruiterId = recruiterId,
             CreatedAt = DateTime.UtcNow
         };
+
+        try
+        {
+            var keyPoints = await _matchingService.GenerateKeyPointsAsync(job.Description);
+            job.KeyPoints = JsonSerializer.Serialize(keyPoints);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Warning: Could not generate key points: {ex.Message}");
+        }
 
         var created = await _jobRepository.CreateAsync(job);
 
@@ -143,12 +154,38 @@ public class JobService : IJobService
         JobType = job.JobType,
         CreatedAt = job.CreatedAt,
         ExpiryDate = job.ExpiryDate,
-        RecruiterName = job.Recruiter?.FullName ?? "Unknown"
+        RecruiterName = job.Recruiter?.FullName ?? "Unknown",
+        KeyPoints = string.IsNullOrWhiteSpace(job.KeyPoints)
+            ? new List<string>()
+            : JsonSerializer.Deserialize<List<string>>(job.KeyPoints) ?? new List<string>()
     };
 
     public async Task<List<JobResponseDto>> GetMyJobsAsync(Guid recruiterId)
     {
         var jobs = await _jobRepository.GetByRecruiterIdAsync(recruiterId);
         return jobs.Select(MapToDto).ToList();
+    }
+
+    public async Task<int> BackfillKeyPointsAsync()
+    {
+        var jobsMissingKeyPoints = await _jobRepository.GetJobsMissingKeyPointsAsync();
+        int updated = 0;
+
+        foreach (var job in jobsMissingKeyPoints)
+        {
+            try
+            {
+                var keyPoints = await _matchingService.GenerateKeyPointsAsync(job.Description);
+                var json = JsonSerializer.Serialize(keyPoints);
+                await _jobRepository.UpdateKeyPointsAsync(job.Id, json);
+                updated++;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Warning: Could not backfill key points for job {job.Id}: {ex.Message}");
+            }
+        }
+
+        return updated;
     }
 }

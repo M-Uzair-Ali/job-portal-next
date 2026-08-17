@@ -84,6 +84,7 @@ public class JobRepository : IJobRepository
         _context.Jobs.Remove(job);
         await _context.SaveChangesAsync();
     }
+
     public async Task<List<Job>> GetByRecruiterIdAsync(Guid recruiterId)
     {
         return await _context.Jobs
@@ -91,5 +92,21 @@ public class JobRepository : IJobRepository
             .Where(j => j.RecruiterId == recruiterId)
             .OrderByDescending(j => j.CreatedAt)
             .ToListAsync();
+    }
+
+    public async Task<List<Job>> GetJobsMissingKeyPointsAsync()
+    {
+        return await _context.Jobs
+            .Where(j => j.KeyPoints == null || j.KeyPoints == "")
+            .ToListAsync();
+    }
+
+    public async Task UpdateKeyPointsAsync(Guid jobId, string keyPointsJson)
+    {
+        var job = await _context.Jobs.FindAsync(jobId)
+            ?? throw new KeyNotFoundException($"Job with ID {jobId} was not found.");
+
+        job.KeyPoints = keyPointsJson;
+        await _context.SaveChangesAsync();
     }
 }

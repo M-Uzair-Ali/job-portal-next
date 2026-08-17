@@ -106,6 +106,14 @@ public class JobsController : ControllerBase
         }
     }
 
+    [HttpPost("backfill-key-points")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> BackfillKeyPoints()
+    {
+        var count = await _jobService.BackfillKeyPointsAsync();
+        return Ok(new { message = $"Backfilled key points for {count} jobs." });
+    }
+
     [HttpDelete("{id}")]
     [Authorize(Roles = "Recruiter,Admin")]
     public async Task<IActionResult> DeleteJob(Guid id)

@@ -254,6 +254,16 @@
   },
   {
     "ContainingType": "JobPortalAPI.API.Controllers.JobsController",
+    "Method": "BackfillKeyPoints",
+    "RelativePath": "api/Jobs/backfill-key-points",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobPortalAPI.API.Controllers.JobsController",
     "Method": "GetMyJobs",
     "RelativePath": "api/Jobs/mine",
     "HttpMethod": "GET",

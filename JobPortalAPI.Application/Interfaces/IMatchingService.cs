@@ -7,5 +7,6 @@
         Task IndexJobAsync(int jobId, string title, string description);
         Task<string> AnalyzeSkillGapAsync(string cvFilePath, string jobDescription, string jobTitle);
         Task DeleteJobAsync(int jobId);
+        Task<List<string>> GenerateKeyPointsAsync(string jobDescription);
     }
 }

@@ -2,7 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using System.Text;
 using System.Text.Json;
-using Microsoft.Extensions.Configuration;
+using System.Linq;
+using Microsoft.Extensions.Logging;
 
 namespace JobPortalAPI.Infrastructure.Services
 {
@@ -10,11 +11,13 @@ namespace JobPortalAPI.Infrastructure.Services
     {
         private readonly HttpClient _httpClient;
         private readonly string _baseUrl;
+        private readonly ILogger<MatchingService> _logger;
 
-        public MatchingService(HttpClient httpClient, IConfiguration configuration)
+        public MatchingService(HttpClient httpClient, IConfiguration configuration, ILogger<MatchingService> logger)
         {
             _httpClient = httpClient;
             _baseUrl = configuration["PythonService:BaseUrl"] ?? "http://127.0.0.1:8000";
+            _logger = logger;
         }
 
         public async Task<string> MatchResumeAsync(string resumeText, int topK = 5)
@@ -31,8 +34,13 @@ namespace JobPortalAPI.Infrastructure.Services
 
         public async Task<string> AnalyzeSkillGapAsync(string cvFilePath, string jobDescription, string jobTitle)
         {
+            _logger.LogInformation($"AnalyzeSkillGapAsync called with: cvFilePath='{cvFilePath}', jobTitle='{jobTitle}', jobDescription length={jobDescription?.Length ?? 0}");
+
             var payload = new { cv_file_path = cvFilePath, job_description = jobDescription, job_title = jobTitle };
             var json = JsonSerializer.Serialize(payload);
+
+            _logger.LogInformation($"Sending to Python: {json}");
+
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             var response = await _httpClient.PostAsync($"{_baseUrl}/skill-gap", content);
@@ -48,6 +56,23 @@ namespace JobPortalAPI.Infrastructure.Services
 
             var response = await _httpClient.PostAsync($"{_baseUrl}/index-job", content);
             response.EnsureSuccessStatusCode();
+        }
+        public async Task<List<string>> GenerateKeyPointsAsync(string jobDescription)
+        {
+            var payload = new { job_description = jobDescription, num_points = 5 };
+            var json = JsonSerializer.Serialize(payload);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PostAsync($"{_baseUrl}/summarize-job", content);
+            response.EnsureSuccessStatusCode();
+
+            var responseJson = await response.Content.ReadAsStringAsync();
+            using var doc = JsonDocument.Parse(responseJson);
+
+            return doc.RootElement.GetProperty("key_points")
+                .EnumerateArray()
+                .Select(x => x.GetString() ?? "")
+                .ToList();
         }
         public async Task<string> MatchCVAsync(string cvFilePath, int topK = 5)
         {

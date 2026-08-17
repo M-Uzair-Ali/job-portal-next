@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 // MOCK DATA — replace with a real API call once the backend
 // endpoint for "get jobs posted by the logged-in recruiter"
@@ -51,7 +50,7 @@ function JobRow({ job, index, onViewApplicants, onEdit, onDelete }) {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05, duration: 0.35, ease: "easeOut" }}
-      className="bg-white border border-sand rounded-xl p-4"
+      className="bg-white border border-sand rounded-md p-4"
     >
       <div className="flex items-start justify-between mb-2">
         <div>
@@ -68,7 +67,7 @@ function JobRow({ job, index, onViewApplicants, onEdit, onDelete }) {
       <div className="flex items-center gap-2 mt-3">
         <button
           onClick={() => onViewApplicants(job)}
-          className="flex-1 bg-gold hover:bg-gold/90 text-ink text-xs font-medium py-2 rounded-lg transition-colors duration-150"
+          className="flex-1 bg-gold hover:bg-purple2 text-white text-xs font-medium py-2 rounded-lg transition-colors duration-150"
         >
           View Applicants ({job.applicantCount})
         </button>
@@ -133,7 +132,6 @@ export default function MyPostedJobs() {
 
   return (
     <div className="min-h-screen bg-cream px-6 py-8 md:px-12">
-      <Navbar />
 
       <div className="max-w-3xl mx-auto">
         <p className="text-sm font-medium text-ink mb-6">My Posted Jobs</p>
@@ -142,7 +140,7 @@ export default function MyPostedJobs() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-sm text-stone bg-white border border-sand rounded-xl p-6 text-center"
+            className="text-sm text-stone bg-white border border-sand rounded-md p-6 text-center"
           >
             You haven't posted any jobs yet.
           </motion.div>

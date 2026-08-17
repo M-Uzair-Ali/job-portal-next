@@ -7,21 +7,25 @@ using Microsoft.AspNetCore.SignalR;
 namespace JobPortalAPI.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/skillgap")]
     public class SkillGapController : ControllerBase
     {
         private readonly IMatchingService _matchingService;
         private readonly IJobService _jobService;
         private readonly IHubContext<SkillGapHub> _hubContext;
+        private readonly ILogger<SkillGapController> _logger;
 
         public SkillGapController(
             IMatchingService matchingService,
             IJobService jobService,
-            IHubContext<SkillGapHub> hubContext)
+            IHubContext<SkillGapHub> hubContext,
+            ILogger<SkillGapController> logger)
         {
             _matchingService = matchingService;
             _jobService = jobService;
             _hubContext = hubContext;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -46,6 +50,8 @@ namespace JobPortalAPI.Controllers
 
                 var job = await _jobService.GetJobByIdAsync(request.JobId);
 
+                _logger.LogInformation($"Job retrieved: Title='{job.Title}', Description length={job.Description?.Length ?? 0}");
+
                 await SendProgress("Analyzing resume against job requirements...", 50);
 
                 // call Python skill gap service
@@ -54,6 +60,8 @@ namespace JobPortalAPI.Controllers
                     job.Description,
                     job.Title
                 );
+
+                _logger.LogInformation($"Python service response: {result}");
 
                 await SendProgress("Analysis complete!", 100);
 

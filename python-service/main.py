@@ -1,12 +1,17 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from matcher import index_jobs, match_resume, model, client
+from matcher import analyze_skill_gap, index_jobs, match_resume, model, client
 from pdf_extractor import extract_text_from_pdf
 from sentence_transformers import util
 import os
 from skill_normalizer import normalize_skills
 from skill_extractor import extract_skills
 from candidate_profile import build_candidate_profile
+from job_summarizer import extract_key_points
+from course_recommender import get_course_suggestions
+from job_importer import import_jobs_from_csv
+import shutil
+import json
 
 BASE_UPLOAD_PATH = r"C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\Uploads"
 
@@ -35,6 +40,10 @@ class SkillGapRequest(BaseModel):
     cv_file_path: str
     job_description: str
     job_title: str
+
+class SummarizeJobRequest(BaseModel):
+    job_description: str
+    num_points: int = 5
 
 
 @app.get("/health")
@@ -124,6 +133,21 @@ def skill_gap(request: SkillGapRequest):
             detail="Could not extract text from CV."
         )
 
+    # Clean and validate job description
+    job_desc = request.job_description
+    if not job_desc or not isinstance(job_desc, str):
+        raise HTTPException(
+            status_code=400,
+            detail="Job description is required and must be a string."
+        )
+
+    job_desc = job_desc.strip()
+
+    print("=" * 60)
+    print(f"Job Description Length: {len(job_desc)}")
+    print(f"Job Description (first 200 chars): {job_desc[:200]}")
+    print("=" * 60)
+
     resume_skills = set(
         normalize_skills(
             extract_skills(resume_text)
@@ -132,22 +156,12 @@ def skill_gap(request: SkillGapRequest):
 
     job_skills = set(
         normalize_skills(
-            extract_skills(request.job_description)
+            extract_skills(job_desc)
         )
     )
 
-    resume_text_for_embedding = " ".join(resume_skills)
-    job_text_for_embedding = " ".join(job_skills)
-
-# Fallback if no skills were extracted
-    if not resume_text_for_embedding.strip():
-        resume_text_for_embedding = resume_text
-
-    if not job_text_for_embedding.strip():
-        job_text_for_embedding = request.job_description
-
-    resume_vector = model.encode(resume_text_for_embedding)
-    job_vector = model.encode(job_text_for_embedding)
+    resume_vector = model.encode(resume_text)
+    job_vector = model.encode(job_desc)
 
     similarity = util.cos_sim(
         resume_vector,
@@ -183,6 +197,8 @@ def skill_gap(request: SkillGapRequest):
         missing_skills=missing
     )
 
+    suggested_resources = get_course_suggestions(missing)
+
     print("=" * 60)
     print("Resume Skills:", sorted(resume_skills))
     print("Job Skills:", sorted(job_skills))
@@ -211,6 +227,7 @@ def skill_gap(request: SkillGapRequest):
         "matched_skills": matched,
         "missing_skills": missing,
         "candidate_profile": candidate_profile,
+        "suggested_resources": suggested_resources,
         "resume_preview": resume_text[:250]
     }
 
@@ -232,3 +249,15 @@ def delete_job(job_id: int):
             status_code=500,
             detail=str(e)
         )
+
+@app.post("/summarize-job")
+def summarize_job(request: SummarizeJobRequest):
+    if not request.job_description or not request.job_description.strip():
+        raise HTTPException(
+            status_code=400,
+            detail="Job description is required."
+        )
+
+    key_points = extract_key_points(request.job_description, request.num_points)
+
+    return {"key_points": key_points}

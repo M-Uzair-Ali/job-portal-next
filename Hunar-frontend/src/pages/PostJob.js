@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 const API_BASE = "https://localhost:7259/api";
 
@@ -58,7 +57,6 @@ navigate("/jobs");
 
   return (
     <div className="min-h-screen bg-cream px-6 py-8 md:px-12">
-      <Navbar />
 
       <div className="flex flex-col items-center">
         <div className="w-full max-w-xl">
@@ -182,7 +180,7 @@ navigate("/jobs");
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gold hover:bg-gold/90 disabled:opacity-60 text-ink text-sm font-medium py-3 rounded-lg transition-colors duration-200"
+                className="w-full bg-gold hover:bg-purple2 disabled:opacity-60 text-white text-sm font-medium py-3 rounded-lg transition-colors duration-200"
               >
                 {loading ? "Posting..." : "Post job"}
               </motion.button>
