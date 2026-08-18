@@ -32,8 +32,11 @@ public class AuthService : IAuthService
             throw new Exception("Email already registered.");
 
         // Parse role
-        if (!Enum.TryParse<UserRole>(request.Role, true, out var userRole))
-            throw new Exception("Invalid role. Use Admin, Recruiter, or Candidate.");
+        if (!Enum.TryParse<UserRole>(request.Role, true, out var userRole)
+            || userRole == UserRole.Admin)
+        {
+            throw new Exception("Invalid role. Use Recruiter or Candidate.");
+        }
 
         // Create user with hashed password
         var user = new User

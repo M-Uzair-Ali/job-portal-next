@@ -9,15 +9,18 @@ from skill_extractor import extract_skills
 from candidate_profile import build_candidate_profile
 from job_summarizer import extract_key_points
 from course_recommender import get_course_suggestions
-from job_importer import import_jobs_from_csv
-import shutil
-import json
-
-BASE_UPLOAD_PATH = r"C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\Uploads"
+from dotenv import load_dotenv
+load_dotenv()
 
 app = FastAPI(
     title="HunarAI Matching Engine",
     version="2.0"
+)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOADS_DIR = os.environ.get(
+    "UPLOADS_DIR",
+    os.path.normpath(os.path.join(BASE_DIR, "..", "JobPortalAPI", "JobPortalAPI", "Uploads"))
 )
 
 class ResumeRequest(BaseModel):
@@ -72,14 +75,11 @@ def match(request: ResumeRequest):
         "total": len(matches)
     }
 
-
 @app.post("/match-cv")
 def match_cv(request: CVFileRequest):
 
-    base_path = r"C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\Uploads"
-
     full_path = os.path.join(
-        base_path,
+        UPLOADS_DIR,
         request.cv_file_path
     )
 
@@ -112,7 +112,12 @@ def match_cv(request: CVFileRequest):
 @app.post("/skill-gap")
 def skill_gap(request: SkillGapRequest):
 
-    base_path = r"C:\Users\Microsoft\source\repos\JobPortalAPI\JobPortalAPI\Uploads"
+    
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    base_path = os.environ.get(
+        "UPLOADS_DIR",
+        os.path.normpath(os.path.join(BASE_DIR, "..", "JobPortalAPI", "JobPortalAPI", "Uploads"))
+    )
 
     full_path = os.path.join(
         base_path,

@@ -11,3 +11,4 @@ namespace JobPortalAPI.Domain.Enums
         Candidate = 3
     }
 }
+ 
